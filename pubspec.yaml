@@ -1,0 +1,45 @@
+name: smart_drop_alarm
+description: "A smart location-based drop alarm app"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.1
+  geolocator: ^11.0.0
+  flutter_background_service: ^5.0.5
+  flutter_local_notifications: ^17.0.0
+  flutter_tts: ^4.0.2
+  audioplayers: ^6.0.0
+  shared_preferences: ^2.2.2
+  permission_handler: ^11.3.0
+  vibration: ^2.0.0
+  cupertino_icons: ^1.0.6
+  google_maps_flutter: ^2.9.0
+  geocoding: ^3.0.0
+  battery_plus: ^6.0.1
+  share_plus: ^10.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/sounds/alarm.mp3
+    - assets/sounds/alarm_bell.mp3
+    - assets/sounds/alarm_digital.mp3
+    - assets/icon/app_icon.png
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon/app_icon.png"
+  min_sdk_android: 21
