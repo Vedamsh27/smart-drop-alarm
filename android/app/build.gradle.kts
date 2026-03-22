@@ -19,14 +19,16 @@ android {
         jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
-    defaultConfig {
-        applicationId = "com.vedamsh.smartdropalarm"
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
-        multiDexEnabled = true
-    }
+   defaultConfig {
+    applicationId = "com.vedamsh.smartdropalarm"
+    minSdk = flutter.minSdkVersion
+    targetSdk = flutter.targetSdkVersion
+    versionCode = flutter.versionCode
+    versionName = flutter.versionName
+    multiDexEnabled = true
+    manifestPlaceholders["MAPS_API_KEY"] =
+        project.findProperty("MAPS_API_KEY") as String? ?: ""
+}
 
     buildTypes {
         release {
